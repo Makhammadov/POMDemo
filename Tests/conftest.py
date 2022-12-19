@@ -11,7 +11,7 @@ from webdriver_manager.microsoft import EdgeChromiumDriverManager
 from selenium.webdriver.firefox.service import Service as FirefoxService
 from webdriver_manager.firefox import GeckoDriverManager
 
-@pytest.fixture(params=["chrome"], scope='class')
+@pytest.fixture(params=["chrome", "firefox"], scope='class')
 def init_driver(request):
     if request.param == "chrome":
         driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()))
