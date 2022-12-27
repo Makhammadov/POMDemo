@@ -9,4 +9,4 @@ class Test_Login(BaseTest):
 
     def test_login(self):
         self.login_page = LoginPage(self.driver)
-        self.login_page.do_login(TestData.USER_ID, TestData.PASSWORD  )
+        self.login_page.do_login(TestData.USER_ID, TestData.PASSWORD)
